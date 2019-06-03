@@ -144,10 +144,10 @@
       </div>
     </div>
     <!-- Projects Section -->
-    <div class="project-4 section section-dark">
+    <div class="project-4 section section-dark cd-section" id="projectSection">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 ml-auto mr-auto text-center">
+            <div class="col-md-8 ml-auto mr-auto text-center" style="margin-bottom: 2.5rem;">
               <h2 class="title">Some of Our Awesome Projects</h2>
               <h5 class="description">This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.</h5>
             </div>
@@ -209,7 +209,7 @@
         </div>
       </div>
     <!-- Team Section -->
-    <div class="team-3">
+    <div class="team-3 cd-section" id="teamSection">
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
@@ -419,7 +419,7 @@
         </a>
       </li>
       <li>
-        <a href="#blogSection" data-number="3">
+        <a href="#projectSection" data-number="3">
           <span class="cd-dot"></span>
           <span class="cd-label">Latest-Project</span>
         </a>
@@ -473,7 +473,7 @@
                 </a>
               </li>
               <li>
-                <a data-scrol href="#blogSection">
+                <a data-scrol href="#projectSection">
                   Latest Project
                 </a>
               </li>
@@ -518,8 +518,28 @@
     </div>
   </footer>
 
-  <!--  Vertical nav - dots -->
- 
+ <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+  <script src="assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="assets/js/plugins/bootstrap-selectpicker.js" type="text/javascript"></script>
+  <!--	Plugin for Datetimepicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Photoswipe files -->
+  <script src="assets/js/plugins/photo_swipe/photoswipe.min.js"></script>
+  <script src="assets/js/plugins/photo_swipe/photoswipe-ui-default.min.js"></script>
+  <script src="assets/js/plugins/photo_swipe/init-gallery.js"></script>
+  <!--  for Jasny fileupload -->
+  <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
   <!-- Control Center: parallax effects, scripts for the  etc -->
   <script src="assets/js/paper-kit.js?v=2.3.0" type="text/javascript"></script>
   <!-- Particle-Js -->
@@ -530,4 +550,4 @@
   <!-- <script>
     var scroll = new SmoothScroll('a[href*="#"]');
   </script> -->
-
+  </body>

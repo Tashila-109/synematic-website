@@ -5,16 +5,24 @@ const { sendWelcomeEmail } = require('../emails/email')
 
 
 // Home Page
-router.get('/', (req, res) => res.render('index'))
+router.get('/', (req, res) => res.render('index', {
+    title: 'Synematic | AR'
+}))
 
 // About-Us Page
-router.get('/aboutus', (req, res) => res.render('about-us'))
+router.get('/aboutus', (req, res) => res.render('about-us', {
+    title: 'About Us | Synematic'
+}))
 
 // Contact-us Page
-router.get('/contactus', (req, res) => res.render('contact-us'))
+router.get('/contactus', (req, res) => res.render('contact-us', {
+    title: 'Contact Us | Synematic'
+}))
 
 // Coming-Soon Page
-router.get('/comingsoon', (req, res) => res.render('coming-soon'))
+router.get('/comingsoon', (req, res) => res.render('coming-soon', {
+    title: 'Coming Soon | Synematic'
+}))
 
 
 // Contact handler in Home Page
@@ -32,7 +40,8 @@ router.post('/', async (req, res) => {
         await newContact.save() 
 
         sendWelcomeEmail(newContact.email, newContact.first_name)
-        res.redirect('/')
+        req.flash('success_msg', ' Thank you for contacting us!')
+        res.redirect('/#contactSection')
         
     } catch (error) {
         console.log(error);
@@ -53,6 +62,8 @@ router.post('/contactus', async (req, res) => {
     try {
         await newContact.save()
 
+        sendWelcomeEmail(newContact.email, newContact.first_name)
+        req.flash('success_msg', ' Thank you for contacting us!')
         res.redirect('/contactus')
         
     } catch (error) {

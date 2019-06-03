@@ -1,7 +1,10 @@
 const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
+const flash = require('connect-flash')
 require('./db/mongoose')
 const path = require('path')
-const hbs = require('hbs')
+const session = require('express-session')
+
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -10,18 +13,36 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 
 const app = express()
 
-// Setup handlebars engine and views location
-app.set('view engine', 'hbs')
+// EJS
+app.use(expressLayouts)
+app.set('view engine', 'ejs')
 app.set('views', viewsPath)
-hbs.registerPartials(partialsPath)
 
 // Bodyparser
 app.use(express.urlencoded({
     extended: false
 }))
 
+// Express Session middleware
+app.use(
+    session({
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
+    })
+)
+
+// Connect Flash
+app.use(flash())
+
 // Public Directory
 app.use(express.static(publicDirectoryPath))
+
+// Global Vars
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg')
+    next()
+})
 
 // Routes
 app.use(express.json())

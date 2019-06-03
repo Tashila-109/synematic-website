@@ -20,7 +20,7 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 60,
+        value: 30,
         density: {
           enable: true,
           value_area: 900
@@ -55,7 +55,7 @@ var pJS = function(tag_id, params){
         }
       },
       size: {
-        value: 2.5,
+        value: 3,
         random: false,
         anim: {
           enable: false,
@@ -66,7 +66,7 @@ var pJS = function(tag_id, params){
       },
       line_linked: {
         enable: true,
-        distance: 250,
+        distance: 350,
         color: '#fff',
         opacity: 1,
         width: 1
@@ -92,11 +92,11 @@ var pJS = function(tag_id, params){
       events: {
         onhover: {
           enable: true,
-          mode: 'grab'
+          mode: 'repulse'
         },
         onclick: {
           enable: true,
-          mode: 'push'
+          mode: 'grab'
         },
         resize: true
       },

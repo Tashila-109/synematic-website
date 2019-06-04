@@ -47,10 +47,6 @@ app.use((req, res, next) => {
 // Routes
 app.use(express.json())
 app.use('/', require('./routers/index'))
-app.use('/aboutus', require('./routers/index'))
-app.use('/contactus', require('./routers/index'))
-app.use('/comingsoon', require('./routers/index'))
-
-
+app.use('/projects', require('./routers/projects'))
 
 module.exports = app

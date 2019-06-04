@@ -8,7 +8,7 @@ $(window).scroll(function () {
       $(".navbar a").addClass("py-2");
       $(".navbar .navbar-brand").css("font-size", "1.1rem");
       $(".navbar .nav-link").css("font-size", "1rem");
-      $(".navbar").css({"opacity": "0.9"});
+      $(".navbar").css({"opacity": "0.95"});
     } else {
       $(".navbar").removeClass("fixed-top");
       $(".navbar").addClass("navbar-absolute");

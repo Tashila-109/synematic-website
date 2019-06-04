@@ -25,6 +25,8 @@ router.get('/comingsoon', (req, res) => res.render('coming-soon', {
 }))
 
 
+
+
 // Contact handler in Home Page
 router.post('/', async (req, res) => {
     const { first_name, last_name, email, subject, message } = req.body

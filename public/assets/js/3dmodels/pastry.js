@@ -9,6 +9,8 @@
 function main() {
   const canvas = document.getElementById('c');
   const renderer = new THREE.WebGLRenderer({canvas});
+  renderer.gammaOutput = true;
+  renderer.gammaFactor = 2.2;
 
   const fov = 45;
   const aspect = 2;  // the canvas default
@@ -48,14 +50,14 @@ function main() {
   {
     const skyColor = 0xB1E1FF;  // light blue
     const groundColor = 0xB97A20;  // brownish orange
-    const intensity = 1;
+    const intensity = 0.4;
     const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
   }
 
   {
     const color = 0xFFFFFF;
-    const intensity = 1;
+    const intensity = 0.5;
     const light_front = new THREE.DirectionalLight(color, intensity);
     const light_back = new THREE.DirectionalLight(color, intensity);
     const light_top = new THREE.DirectionalLight(color, intensity);    

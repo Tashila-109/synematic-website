@@ -50,41 +50,41 @@ function main() {
   {
     const skyColor = 0xB1E1FF;  // light blue
     const groundColor = 0xB97A20;  // brownish orange
-    const intensity = 0.4;
+    const intensity = 1;
     const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
   }
 
   {
     const color = 0xFFFFFF;
-    const intensity = 0.5;
-    const light_front = new THREE.DirectionalLight(color, intensity);
-    const light_back = new THREE.DirectionalLight(color, intensity);
-    const light_top = new THREE.DirectionalLight(color, intensity);    
-    const light_bottom = new THREE.DirectionalLight(color, intensity);
-    const light_left = new THREE.DirectionalLight(color, intensity);    
-    const light_right = new THREE.DirectionalLight(color, intensity);    
+    const intensity = 0.8;
+    const light_front = new THREE.AmbientLight(color, intensity);
+    // const light_back = new THREE.AmbientLight(color, intensity);
+    // const light_top = new THREE.DirectionalLight(color, intensity);    
+    // const light_bottom = new THREE.DirectionalLight(color, intensity);
+    // const light_left = new THREE.DirectionalLight(color, intensity);    
+    // const light_right = new THREE.DirectionalLight(color, intensity);    
 
     light_front.position.set(0, 0, 1);
-    light_back.position.set(0, 0, -1);
-    light_top.position.set(0, 1, 0);
-    light_bottom.position.set(0, -1, 0);
-    light_left.position.set(1, 0, 0);
-    light_right.position.set(-1, 0, 0);
+    // light_back.position.set(0, 0, -1);
+    // light_top.position.set(0, 1, 0);
+    // light_bottom.position.set(0, -1, 0);
+    // light_left.position.set(1, 0, 0);
+    // light_right.position.set(-1, 0, 0);
 
     scene.add(light_front);
-    scene.add(light_back);
-    scene.add(light_top);
-    scene.add(light_bottom);
-    scene.add(light_left);
-    scene.add(light_right);
+    // scene.add(light_back);
+    // scene.add(light_top);
+    // scene.add(light_bottom);
+    // scene.add(light_left);
+    // scene.add(light_right);
 
     scene.add(light_front.target);
-    scene.add(light_back.target);
-    scene.add(light_top.target);
-    scene.add(light_bottom.target);
-    scene.add(light_left.target);
-    scene.add(light_right.target);
+    // scene.add(light_back.target);
+    // scene.add(light_top.target);
+    // scene.add(light_bottom.target);
+    // scene.add(light_left.target);
+    // scene.add(light_right.target);
 
   }
 

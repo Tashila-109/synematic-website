@@ -26,6 +26,16 @@ function main() {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0xEEEEEE);
 
+  const loadingManager = new THREE.LoadingManager( () => {
+	
+		const loadingScreen = document.getElementById( 'loading-screen' );
+		loadingScreen.classList.add( 'fade-out' );
+		
+		// optional: remove loader from DOM via event listener
+		loadingScreen.addEventListener( 'transitionend', onTransitionEnd );
+		
+	} );
+
   // {
   //   const planeSize = 40;
 
@@ -116,7 +126,7 @@ function main() {
   }
 
   {
-    const gltfLoader = new THREE.GLTFLoader();
+    const gltfLoader = new THREE.GLTFLoader(loadingManager);
     gltfLoader.load('/assets/3dmodels/Pastry.glb', (gltf) => {
       const root = gltf.scene;
       scene.add(root);
@@ -163,6 +173,13 @@ function main() {
   }
 
   requestAnimationFrame(render);
+
+  function onTransitionEnd( event ) {
+
+    const element = event.target;
+    element.remove();
+    
+  }
 }
 
 main();

@@ -57,15 +57,16 @@ function main() {
 
   {
     const color = 0xFFFFFF;
-    const intensity = 0.8;
-    const light_front = new THREE.AmbientLight(color, intensity);
+    const intensity = 0.9;
+    const light_front = new THREE.SpotLight(color, intensity);
     // const light_back = new THREE.AmbientLight(color, intensity);
     // const light_top = new THREE.DirectionalLight(color, intensity);    
     // const light_bottom = new THREE.DirectionalLight(color, intensity);
     // const light_left = new THREE.DirectionalLight(color, intensity);    
     // const light_right = new THREE.DirectionalLight(color, intensity);    
 
-    light_front.position.set(0, 0, 1);
+    light_front.position.set(0, 0, 25);
+
     // light_back.position.set(0, 0, -1);
     // light_top.position.set(0, 1, 0);
     // light_bottom.position.set(0, -1, 0);

@@ -7,7 +7,7 @@
 /* global THREE */
 
 function main() {
-  const canvas = document.querySelector('#c');
+  const canvas = document.getElementById('c');
   const renderer = new THREE.WebGLRenderer({canvas});
 
   const fov = 45;
@@ -109,7 +109,7 @@ function main() {
     camera.updateProjectionMatrix();
 
     // point the camera to look at the center of the box
-    camera.lookAt(boxCenter.x, boxCenter.y, boxCenter.z);
+    camera.lookAt(boxCenter.x , boxCenter.y, boxCenter.z);
   }
 
   {
@@ -126,7 +126,7 @@ function main() {
       const boxCenter = box.getCenter(new THREE.Vector3());
 
       // set the camera to frame the box
-      frameArea(boxSize * 0.8, boxSize, boxCenter, camera);
+      frameArea(boxSize * 1, boxSize, boxCenter, camera);
 
       // update the Trackball controls to handle the new size
       controls.maxDistance = boxSize * 10;
@@ -139,6 +139,7 @@ function main() {
     const canvas = renderer.domElement;
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
+    
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
       renderer.setSize(width, height, false);

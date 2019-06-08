@@ -1,5 +1,5 @@
 #c {
-  width: 630px;
+  width: 600px;
     height: 580px;
     display: block;
     position: absolute;
@@ -8,7 +8,7 @@
 
 @media (max-width: 1199px) { 
   #c {
-    width: 630px;
+    width: 600px;
     height: 580px;
     display: block;
     position: absolute;

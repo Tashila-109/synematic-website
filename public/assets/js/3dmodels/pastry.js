@@ -1,5 +1,4 @@
 // Three.js - Load .GLTF
-// from https://threejsfundamentals.org/threejs/threejs-load-gltf.html
 
 
 'use strict';
@@ -8,12 +7,14 @@
 
 function main() {
   const canvas = document.getElementById('c');
-  const renderer = new THREE.WebGLRenderer({canvas});
+  const renderer = new THREE.WebGLRenderer({
+    canvas
+  });
   renderer.gammaOutput = true;
   renderer.gammaFactor = 2.2;
 
   const fov = 45;
-  const aspect = 2;  // the canvas default
+  const aspect = 2; // the canvas default
   const near = 0.1;
   const far = 100;
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
@@ -26,15 +27,15 @@ function main() {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0xEEEEEE);
 
-  const loadingManager = new THREE.LoadingManager( () => {
-	
-		const loadingScreen = document.getElementById( 'loading-screen' );
-		loadingScreen.classList.add( 'fade-out' );
-		
-		// optional: remove loader from DOM via event listener
-		loadingScreen.addEventListener( 'transitionend', onTransitionEnd );
-		
-	} );
+  const loadingManager = new THREE.LoadingManager(() => {
+
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.add('fade-out');
+
+    // optional: remove loader from DOM via event listener
+    loadingScreen.addEventListener('transitionend', onTransitionEnd);
+
+  });
 
   // {
   //   const planeSize = 40;
@@ -58,24 +59,24 @@ function main() {
   // }
 
   {
-    const skyColor = 0xB1E1FF;  // light blue
-    const groundColor = 0xB97A20;  // brownish orange
+    const skyColor = 0xB1E1FF; // light blue
+    const groundColor = 0xB97A20; // brownish orange
     const intensity = 1;
     const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
   }
 
   {
-    const color = 0xFFFFFF;
-    const intensity = 0.9;
-    const light_front = new THREE.SpotLight(color, intensity);
+    const color = 0x404040;
+    const intensity = 2;
+    const light_front = new THREE.AmbientLight(color, intensity);
     // const light_back = new THREE.AmbientLight(color, intensity);
     // const light_top = new THREE.DirectionalLight(color, intensity);    
     // const light_bottom = new THREE.DirectionalLight(color, intensity);
     // const light_left = new THREE.DirectionalLight(color, intensity);    
     // const light_right = new THREE.DirectionalLight(color, intensity);    
 
-    light_front.position.set(0, 0, 25);
+    // light_front.position.set(0, 0, 25);
 
     // light_back.position.set(0, 0, -1);
     // light_top.position.set(0, 1, 0);
@@ -106,9 +107,9 @@ function main() {
     // compute a unit vector that points in the direction the camera is now
     // in the xz plane from the center of the box
     const direction = (new THREE.Vector3())
-        .subVectors(camera.position, boxCenter)
-        .multiply(new THREE.Vector3(1, 0, 1))
-        .normalize();
+      .subVectors(camera.position, boxCenter)
+      .multiply(new THREE.Vector3(1, 0, 1))
+      .normalize();
 
     // move the camera to a position distance units way from the center
     // in whatever direction the camera was from the center already
@@ -122,7 +123,7 @@ function main() {
     camera.updateProjectionMatrix();
 
     // point the camera to look at the center of the box
-    camera.lookAt(boxCenter.x , boxCenter.y, boxCenter.z);
+    camera.lookAt(boxCenter.x, boxCenter.y, boxCenter.z);
   }
 
   {
@@ -130,6 +131,7 @@ function main() {
     gltfLoader.load('/assets/3dmodels/Pastry.glb', (gltf) => {
       const root = gltf.scene;
       scene.add(root);
+
 
       // compute the box that contains all the stuff
       // from root and below
@@ -152,7 +154,7 @@ function main() {
     const canvas = renderer.domElement;
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
-    
+
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
       renderer.setSize(width, height, false);
@@ -174,11 +176,11 @@ function main() {
 
   requestAnimationFrame(render);
 
-  function onTransitionEnd( event ) {
+  function onTransitionEnd(event) {
 
     const element = event.target;
     element.remove();
-    
+
   }
 }
 

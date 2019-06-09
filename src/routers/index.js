@@ -9,15 +9,15 @@ router.get('/', (req, res) => res.render('index', {
     title: 'Synematic | AR'
 }))
 
-// About-Us Page
-router.get('/aboutus', (req, res) => res.render('about-us', {
-    title: 'About Us | Synematic'
-}))
+// // About-Us Page
+// router.get('/aboutus', (req, res) => res.render('about-us', {
+//     title: 'About Us | Synematic'
+// }))
 
-// Contact-us Page
-router.get('/contactus', (req, res) => res.render('contact-us', {
-    title: 'Contact Us | Synematic'
-}))
+// // Contact-us Page
+// router.get('/contactus', (req, res) => res.render('contact-us', {
+//     title: 'Contact Us | Synematic'
+// }))
 
 // Coming-Soon Page
 router.get('/comingsoon', (req, res) => res.render('coming-soon', {
@@ -50,28 +50,28 @@ router.post('/', async (req, res) => {
     }
 })
 
-// Contact Handler for Contact-us Page
-router.post('/contactus', async (req, res) => {
-    const { first_name, last_name, email, subject, message } = req.body
-    const newContact = new Contact({
-        first_name,
-        last_name,
-        email,
-        subject,
-        message
-    })
+// // Contact Handler for Contact-us Page
+// router.post('/contactus', async (req, res) => {
+//     const { first_name, last_name, email, subject, message } = req.body
+//     const newContact = new Contact({
+//         first_name,
+//         last_name,
+//         email,
+//         subject,
+//         message
+//     })
 
-    try {
-        await newContact.save()
+//     try {
+//         await newContact.save()
 
-        sendWelcomeEmail(newContact.email, newContact.first_name)
-        req.flash('success_msg', ' Thank you for contacting us!')
-        res.redirect('/contactus')
+//         sendWelcomeEmail(newContact.email, newContact.first_name)
+//         req.flash('success_msg', ' Thank you for contacting us!')
+//         res.redirect('/contactus')
         
-    } catch (error) {
-        console.log(error);
-    }
-})
+//     } catch (error) {
+//         console.log(error);
+//     }
+// })
 
 
 

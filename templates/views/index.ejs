@@ -1,10 +1,10 @@
 <body class="landing-page sidebar-collapse">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg nav-down navbar-absolute navbar-transparent">
+  <nav class="navbar navbar-expand-lg nav-down navbar-absolute navbar-transparent" style="height: 80px;">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" style="font-size:2rem;" href="/">
-          Synematic
+        <a class="navbar-brand" style="font-size:1.5rem;" href="/">
+        Synematic
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="font-size:1.1rem;" href="/aboutus" id="aboutLink" aria-haspopup="true"
+            <a class="nav-link" style="font-size:1.1rem;" href="#aboutSection" id="aboutLink" aria-haspopup="true"
               aria-expanded="false">
               About Us
             </a>
@@ -35,13 +35,13 @@
               <a href="/projects/arfood" class="dropdown-item">
                 Food Project
               </a>
-              <a href="/comingsoon" class="dropdown-item">
+              <%# <a href="/comingsoon" class="dropdown-item">
                 3D-Modelling
-              </a>
+              </a> %>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="font-size:1.1rem;" href="/contactus" id="contactLink" aria-haspopup="true"
+            <a class="nav-link" style="font-size:1.1rem;" href="#contactSection" id="contactLink" aria-haspopup="true"
               aria-expanded="false">
               Contact Us
             </a>
@@ -54,16 +54,16 @@
   <!-- Header-Section -->
   <div id="homeSection" class="cd-section" style="scroll-behavior: smooth;">
     <div class="page-header" data-parallax="true"
-      style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/sections/back-light-backlight-blue-1150988.jpg');">
-      <div class="filter" id="particles-js"></div>
+      style="background-image:  url('assets/img/sections/home_page.png');">
+      <div  id="particles-js"></div>
       <div class="content-center">
         <div class="container">
-          <div class="motto">
-            <h1 style="font-size:4rem; font-weight:350" class="title">Augmented and Virtual Reality Services</h1>
-            <h3 class="description mt-5" style="font-size:1.3rem;">We cater to all your AR/VR needs and provide high
-              quality solutions.</h3>
+          <div class="col-md-3 motto">
+            <h1 style="font-size:4rem; font-weight:600; margin: 0;" class="title">Synematic</h1>
+            <h1 style="font-size:4rem; font-weight:600; color: rgb(255, 255, 255); margin-top: 0;">Studios</h1>
+            <h3 class="description mt-5" style="font-size:1.3rem;">Augmented Reality and Virtual Reality Services</h3>
             <br />
-            <a href="#aboutSection" class="btn btn-primary btn-round btn-lg" ><i class=""></i>Learn More</a>
+            <a href="#aboutSection" class="btn btn-info btn-round btn-lg pull-left" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); "><i class=""></i>Learn More</a>
           </div>
         </div>
       </div>
@@ -72,69 +72,68 @@
   <div class="wrapper">
     <!-- What we do Section -->
     <div id="aboutSection" class="cd-section">
-      <div class="features-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 ml-auto mr-auto text-center">
-              <h2 class="title">What you have been looking for all in one place</h2>
-              <h5 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam corrupti excepturi
-                tempora cum voluptatem velit aut ex impedit aperiam eveniet totam hic, praesentium pariatur quos.</h5>
-              <br />
+      <div  class="cd-section">
+        <div class="features-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 ml-auto mr-auto text-center">
+                <h2 class="title">What you have been looking for all in one place</h2>
+                <h5 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam corrupti excepturi
+                  tempora cum voluptatem velit aut ex impedit aperiam eveniet totam hic, praesentium pariatur quos.</h5>
+                <br />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card" data-background="image"
-                style="background-image: url('assets/img/sections/jan-sendereks.jpg')">
-                <div class="card-body">
-                  <h6 class="card-category">Augmented Reality</h6>
-                  <div class="card-icon">
-                    <i class="nc-icon nc-send"></i>
-                  </div>
-                  <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                    asperiores
-                    alias praesentium minima, mollitia fugiat.</p>
-                  <div class="card-footer">
-                    <a href="/aboutus" class="btn btn-link btn-neutral">
-                      <i class="fa fa-book" aria-hidden="true"></i> Show more
-                    </a>
+            <div class="row" style="padding-top: 40px;">
+              <div class="col-md-4">
+                <div class="card" data-background="color" data-color="blue">
+                  <div class="card-body text-center">
+                    <h6 class="card-category" style="padding-top: 25px;">Augmented Reality</h6>
+                    <div class="card-icon">
+                      <i class="nc-icon nc-send"></i>
+                    </div>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                      asperiores
+                      alias praesentium minima, mollitia fugiat.</p>
+                    <div class="card-footer">
+                      <a href="/aboutus" class="btn btn-link btn-neutral">
+                        <i class="fa fa-book" aria-hidden="true"></i> Show more
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card" data-background="image"
-                style="background-image: url('assets/img/sections/anders-jilden.jpg')">
-                <div class="card-body">
-                  <h6 class="card-category">Virtual Reality</h6>
-                  <div class="card-icon">
-                    <i class="nc-icon nc-app"></i>
-                  </div>
-                  <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-                    exercitationem, provident officia labore natus ad.</p>
-                  <div class="card-footer">
-                    <a href="/aboutus" class="btn btn-link btn-neutral">
-                      <i class="fa fa-book" aria-hidden="true"></i> Show more
-                    </a>
+              <div class="col-md-4">
+                <div class="card" data-background="color" data-color="purple">
+                  <div class="card-body text-center">
+                    <h6 class="card-category" style="padding-top: 25px;">Virtual Reality</h6>
+                    <div class="card-icon">
+                      <i class="nc-icon nc-app"></i>
+                    </div>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                      exercitationem, provident officia labore natus ad.</p>
+                    <div class="card-footer">
+                      <a href="/aboutus" class="btn btn-link btn-neutral">
+                        <i class="fa fa-book" aria-hidden="true"></i> Show more
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card" data-background="image"
-                style="background-image: url('assets/img/sections/uriel-soberanes.jpg')">
-                <div class="card-body">
-                  <h6 class="card-category">3D-Modelling</h6>
-                  <div class="card-icon">
-                    <i class="nc-icon nc-vector"></i>
-                  </div>
-                  <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quo
-                    itaque
-                    aspernatur ratione dicta obcaecati.</p>
-                  <div class="card-footer">
-                    <a href="/aboutus" class="btn btn-link btn-neutral">
-                      <i class="fa fa-book" aria-hidden="true"></i> Show more
-                    </a>
+              <div class="col-md-4">
+                <div class="card" data-background="color" data-color="orange">
+                  <div class="card-body text-center">
+                    <h6 class="card-category" style="padding-top: 25px;">3D-Modelling</h6>
+                    <div class="card-icon">
+                      <i class="nc-icon nc-vector"></i>
+                    </div>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quo
+                      itaque
+                      aspernatur ratione dicta obcaecati.</p>
+                    <div class="card-footer">
+                      <a href="/aboutus" class="btn btn-link btn-neutral">
+                        <i class="fa fa-book" aria-hidden="true"></i> Show more
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -142,14 +141,67 @@
           </div>
         </div>
       </div>
+      <!--Features Section -->
+      <div class="features-4 mt-5" style="padding-top: 0;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Is this what you are looking for?</h2>
+                    <h5 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, tempore
+                      voluptates. Ratione dolores asperiores laboriosam assumenda eum voluptas vero repudiandae!</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="ipad-container">
+                      <img src="assets/img/sections/iphone-2.png" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 offset-1">
+                    <div class="info info-horizontal">
+                      <div class="icon icon-info">
+                        <i class="nc-icon nc-send" aria-hidden="true"></i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Augmented Reality</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam vel dolores dolorum nesciunt
+                          excepturi a adipisci modi officiis ipsum.</p>
+                      </div>
+                    </div>
+                    <div class="info info-horizontal">
+                      <div class="icon icon-success">
+                        <i class="nc-icon nc-app" aria-hidden="true"></i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Virtual Reality</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur maxime numquam
+                          magnam doloremque vero ut rem molestiae. Repellat, dicta.</p>
+                      </div>
+                    </div>
+                    <div class="info info-horizontal">
+                      <div class="icon icon-danger">
+                        <i class="nc-icon nc-vector" aria-hidden="true"></i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Beautiful Models</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe itaque quam tenetur tempore
+                          nihil
+                          sit?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
     <!-- Projects Section -->
-    <div class="project-4 section section-dark cd-section" id="projectSection">
-        <div class="container">
+    <div class="project-4 section cd-section" id="projectSection" style="background-image: url('assets/img/sections/background_purple.png'); ">
+        <div class="container" >
           <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center" style="margin-bottom: 2.5rem;">
-              <h2 class="title">Some of Our Awesome Projects</h2>
-              <h5 class="description">This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.</h5>
+              <h2 class="title" style="color: white;">Some of Our Awesome Projects</h2>
+              <h5 class="description" style="color: white;">This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.</h5>
             </div>
           </div>
           <div class="space-top"></div>
@@ -164,11 +216,11 @@
             <div class="col-md-5 mr-auto">
               <div class="card card-plain">
                 <div class="card-body">
-                  <h6 class="card-category">Technology</h6>
+                  <h6 class="card-category" style="color: white;">Technology</h6>
                   <a href="#pablo">
-                    <h3 class="card-title">Augmented Reality Food</h3>
+                    <h3 class="card-title" style="color: white;">Augmented Reality Food</h3>
                   </a>
-                  <p class="card-description">Artificial intelligence-focused investment funds are a dime a dozen these days. Everyone knows there’s money to be made from AI, but to capture value, good VCs know they need to back products and not technologies.</p>
+                  <p class="card-description" style="color: white;">Artificial intelligence-focused investment funds are a dime a dozen these days. Everyone knows there’s money to be made from AI, but to capture value, good VCs know they need to back products and not technologies.</p>
                   <div class="card-footer">
                     <a href="/projects/arfood" class="btn btn-link btn-neutral">
                       <i class="fa fa-book" aria-hidden="true"></i> Read More
@@ -185,11 +237,11 @@
             <div class="col-md-5 ml-auto">
               <div class="card card-plain">
                 <div class="card-body">
-                  <h6 class="card-category">Design</h6>
+                  <h6 class="card-category" style="color: white;">Design</h6>
                   <a href="#pablo">
-                    <h3 class="card-title">The aesthetic quality of a product</h3>
+                    <h3 class="card-title" style="color: white;">The aesthetic quality of a product</h3>
                   </a>
-                  <p class="card-description">Eventually, the data collected from the grant program could allow the two to play a bit of machine learning moneyball — valuing machine learning engineers without traditional metrics (like having a PhD from Stanford)...</p>
+                  <p class="card-description" style="color: white;">Eventually, the data collected from the grant program could allow the two to play a bit of machine learning moneyball — valuing machine learning engineers without traditional metrics (like having a PhD from Stanford)...</p>
                   <div class="card-footer">
                     <a href="/comingsoon" class="btn btn-link btn-neutral">
                       <i class="fa fa-book" aria-hidden="true"></i> Read More
@@ -209,12 +261,17 @@
         </div>
       </div>
     <!-- Team Section -->
-    <div class="team-3 cd-section" id="teamSection">
+    <div class="team-3 cd-section" id="teamSection" style="padding-top: 40px">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 ml-auto mr-auto text-center">
+          <div class="col-md-6 ml-auto mr-auto text-center">
             <h2 class="title">The Executive Team</h2>
             <h5 class="description">Our Team consists of four talented individuals from various backgrounds, each specialized in a particular area.</h5>
+            <h5 class="description" style="padding-top: 50px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur maxime numquam
+                          magnam doloremque vero ut rem molestiae. Repellat, dicta.</h5>
+          </div>
+          <div class="col-md-6 ml-auto mr-auto text-center">
+                <img src="/assets/img/sections/team_vr.png">
           </div>
         </div>
         <div class="space-top"></div>
@@ -224,7 +281,7 @@
               <div class="row">
                 <div class="col-md-5">
                   <div class="card-img-top">  
-                      <img class="img" src="./assets/img/faces/vidura.png" />
+                      <img class="img" src="/assets/img/faces/vidura.png" />
                   </div>
                 </div>
                 <div class="col-md-7">
@@ -249,7 +306,7 @@
               <div class="row">
                 <div class="col-md-5">
                   <div class="card-img-top">
-                      <img class="img" src="./assets/img/faces/cheva.png" />
+                      <img class="img" src="/assets/img/faces/cheva.png" />
                   </div>
                 </div>
                 <div class="col-md-7">
@@ -274,7 +331,7 @@
               <div class="row">
                 <div class="col-md-5">
                   <div class="card-img-top">
-                      <img class="img" src="./assets/img/faces/tashila.png" />
+                      <img class="img" src="/assets/img/faces/tashila.png" />
                   </div>
                 </div>
                 <div class="col-md-7">
@@ -299,7 +356,7 @@
               <div class="row">
                 <div class="col-md-5">
                   <div class="card-img-top">
-                      <img class="img" src="./assets/img/faces/manuka.jpg" />
+                      <img class="img" src="/assets/img/faces/manuka.jpg" />
                   </div>
                 </div>
                 <div class="col-md-7">
@@ -322,10 +379,11 @@
         </div>
       </div>
     </div>
+
     <!-- Contact-Us Section -->
     <div id="contactSection" class="cd-section">
       <div class="contactus-2"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/sections/pk-pro-cover.jpg'); background-size: cover;">
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/sections/background_contact.png');">
         <div class="container">
           <div class="row">
             <div class="col-md-10 ml-auto mr-auto">
@@ -381,6 +439,10 @@
                         <div class="form-group label-floating">
                           <label class="control-label">Email address</label>
                           <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group label-floating">
+                          <label class="control-label">Subject</label>
+                          <input type="text" class="form-control" placeholder="Subject" name="subject" required>
                         </div>
                         <div class="form-group label-floating">
                           <label class="control-label">Your message</label>

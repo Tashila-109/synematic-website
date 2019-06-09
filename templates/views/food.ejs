@@ -1,10 +1,10 @@
-<body class="blog-post sidebar-collapse">
+<body class="blog-post sidebar-collapse presentation-page">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg nav-down navbar-absolute navbar-transparent" color-on-scroll="500">
+  <nav class="navbar navbar-expand-lg nav-down navbar-absolute navbar-transparent" color-on-scroll="500" style="height: 70px;">
     <div class="container">
         <div class="navbar-translate">
           <a class="navbar-brand" style="font-size:2rem;" href="/">
-            Synematic
+           
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,9 +22,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="font-size:1.1rem;" href="/aboutus" id="aboutLink" aria-haspopup="true"
+              <a class="nav-link" style="font-size:1.1rem;" href="#aboutProject" id="aboutLink" aria-haspopup="true"
                 aria-expanded="false">
-                About Us
+                About Project
               </a>
             </li>
             <li class="dropdown nav-item">
@@ -35,13 +35,13 @@
                 <a href="/projects/arfood" class="dropdown-item">
                   Food Project
                 </a>
-                <a href="#" class="dropdown-item">
+                <%# <a href="#" class="dropdown-item">
                   3D-Modelling
-                </a>
+                </a> %>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="font-size:1.1rem;" href="/contactus" id="contactLink" aria-haspopup="true"
+              <a class="nav-link" style="font-size:1.1rem;" href="#contactSection" id="contactLink" aria-haspopup="true"
                 aria-expanded="false">
                 Contact Us
               </a>
@@ -51,101 +51,25 @@
       </div>
   </nav>
   <!-- End Navbar -->
-  <div class="page-carousel">
-    <div class="filter"></div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <div class="page-header" style="background-image: linear-gradient(rgba(245, 89, 61, 0.6), rgba(0, 0, 0, 0.5)), url('/assets/img/sections/bread-bun-burger-1639562.jpg'); background-size: cover;">
-            <div class="filter"></div>
-            <div class="content-center">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6 text-left">
-                    <h1 class="title">Augmented Reality Food</h1>
-                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, nisi sapiente aliquid illum quisquam eaque ex? Voluptate tenetur perspiciatis dolore dolorem temporibus recusandae dolor at!</h5>
-                    <br />
-                    <div class="buttons">
-                      <a href="#3dmodel" class="btn btn-danger btn-round  btn-lg">
-                        Learn More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="page-header" style="background-image: linear-gradient(rgba(245, 89, 61, 0.45), rgba(0, 0, 0, 0.6)), url('/assets/img/sections/blurred-background-bowl-cuisine-842545.jpg'); background-size: cover;">
-            <div class="filter"></div>
-            <div class="content-center">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h1 class="title">Awesome Experiences</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis cumque fuga ratione minima unde. Eaque quam, harum labore ex veritatis repellat soluta sint explicabo quaerat?</h5>
-                    <br />
-                    <!-- <h6>Connect with us:</h6>
-                    <div class="buttons">
-                      <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                      <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                        <i class="fa fa-facebook-square"></i>
-                      </a>
-                      <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                        <i class="fa fa-instagram"></i>
-                      </a>
-                      <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                        <i class="fa fa-google-plus"></i>
-                      </a>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="page-header" style="background-image: linear-gradient(rgba(245, 89, 61, 0.45), rgba(0, 0, 0, 0.7)), url('/assets/img/sections/beef-cooked-cuisine-1268549.jpg'); background-size: cover;">
-            <div class="filter"></div>
-            <div class="content-center">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-7 ml-auto text-right">
-                    <h2 class="title">Premium 3D-Models</h2>
-                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, natus! Laudantium blanditiis repellat tenetur iure dignissimos cum, aspernatur amet necessitatibus nemo? Modi nihil, debitis aliquid et quaerat temporibus architecto! Distinctio.</h5>
-                    <br />
-                    <div class="buttons">
-                      <a href="#3dmodel" class="btn btn-success btn-round btn-lg">
-                        See More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div id="homeSection" class="cd-section" style="scroll-behavior: smooth;">
+    <div class="page-header" 
+      style="background-image:  url('/assets/img/sections/home_page-3.png');">
+      <div  id="particles-js"></div>
+      <div class="content-center">
+        <div class="container">
+          <div class="col-md-4 motto">
+            <h1 style="font-size:4rem; font-weight:600; margin: 0;" class="title">Augmented</h1>
+            <h1 style="font-size:4rem; font-weight:600; color: rgb(255, 255, 255); margin-top: 0; text-align: left;">Reality Food</h1>
+            <h3 class="description mt-5" style="font-size:1.3rem; text-align: left;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex nam ratione quos, ab possimus, cupiditate suscipit quam quae fugiat officiis  </h3>
+            <br />
+            <a href="#aboutProject" class="btn btn-danger btn-round btn-lg pull-left" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"><i class=""></i>Learn More</a>
           </div>
         </div>
       </div>
-      <a class="left carousel-control carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="fa fa-angle-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="fa fa-angle-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
   </div>
    <!--     *********     FEATURES 1      *********      -->
-  <div class="features-1">
+  <div class="features-1" id="aboutProject">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
@@ -278,7 +202,7 @@
     </div>
   </div>
    <!--     *********     Use Cases      *********      -->
-   <div class="features-5 section-image" style="background-image: linear-gradient(rgba(125, 46, 33, 0.8), rgba(0, 0, 0, 0.6)), url('/assets/img/sections/bracelets-camera-cellphone-744780.jpg');">
+   <div class="features-5 " style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),  url('/assets/img/sections/cases.jpg'); padding-top: 20px">
     <div class="container" >
       <div class="row">
         <div class="ml-auto mr-auto">
@@ -314,35 +238,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4 ml-auto">
-          <div class="info">
-            <div class="icon">
-              <i class="nc-icon nc-atom" aria-hidden="true"></i>
-            </div>
-            <h4 class="title">Snapchat Menus at Restaurant</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque eaque sint dolorum. Debitis aut vero corrupti necessitatibus cupiditate. Fuga, eius.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 ml-auto">
-            <div class="info">
-              <div class="icon">
-                <i class="nc-icon nc-atom" aria-hidden="true"></i>
-              </div>
-              <h4 class="title">3D Banner Ads</h4>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque eaque sint dolorum. Debitis aut vero corrupti necessitatibus cupiditate. Fuga, eius.</p>
-            </div>
-          </div>
-        <div class="col-sm-4 mr-auto">
-          <div class="info">
-            <div class="icon">
-              <i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>
-            </div>
-            <h4 class="title">AR Storytelling</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque eaque sint dolorum. Debitis aut vero corrupti necessitatibus cupiditate. Fuga, eius.</p>
-          </div>
-        </div>
-      </div>
+      
       <div class="row bottom-line">
         <div class="col-sm-4 ml-auto">
           <div class="info">
@@ -375,6 +271,38 @@
       
     </div>
   </div>
+  <!-- App Show Case -->
+  <div class="section section-responsive section-gold" >
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="phone-container">
+            <img src="/assets/img/sections/responsive.png" />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="info info-horizontal">
+            <div class="icon icon-danger">
+              <i class="nc-icon nc-tablet-2"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title"> About App </h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque eaque sint dolorum. Debitis aut vero corrupti necessitatibus cupiditate. Fuga, eius..</p>
+            </div>
+          </div>
+          <div class="info info-horizontal">
+            <div class="icon icon-danger">
+              <i class="nc-icon nc-html5"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title"> Details on App </h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque eaque sint dolorum. Debitis aut vero corrupti necessitatibus cupiditate. Fuga, eius.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Pre Footer -->
   <div class="subscribe-line">
     <div class="container">
@@ -395,7 +323,7 @@
   <!-- Contact-Us Section -->
   <div id="contactSection" class="cd-section">
     <div class="contactus-2"
-      style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/sections/burger-chips-dinner-70497.jpg'); background-size: cover;">
+      style="background-image:  url('/assets/img/sections/background_contact.png'); background-size: cover;">
       <div class="container">
         <div class="row">
           <div class="col-md-10 ml-auto mr-auto">
@@ -575,20 +503,9 @@
   <script src="/assets/js/paper-kit.js?v=2.3.0" type="text/javascript"></script>
  <!-- Smooth Scroll -->
   <script src="/vendors/js/smooth-scroll.polyfills.min.js"></script>
-  <script>
-    var scroll = new SmoothScroll('a[href*="#"]');
-  </script>
+  
   <!-- Scroll Animation -->
   <script src="/assets/js/scroll-navigation.js"></script>
   <!--  Plugin for presentation page - isometric cards  -->
   <script src="/assets/js/plugins/presentation-page/main.js"></script>
-  <!-- 3D Model Files -->
-  <%# <script src="/assets/js/plugins/threejs/three.min.js"></script>
-  <script src="/assets/js/plugins/threejs/GLTFLoader.js"></script>
-  <script src="/assets/js/plugins/threejs/LoaderSupport.js"></script>
-  <script src="/assets/js/plugins/threejs/OrbitControls.js"></script>
-  <script src="/assets/js/plugins/threejs/OBJLoader2.js"></script>
-  <script src="/assets/js/plugins/threejs/MTLLoader.js"></script>
-  <script src="/assets/js/3dmodels/pastry.js"></script> %>
-
 </body>

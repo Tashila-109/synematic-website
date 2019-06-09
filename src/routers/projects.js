@@ -5,7 +5,8 @@ const { sendWelcomeEmail } = require('../emails/email')
 
 // Augmented Reality Food Page
 router.get('/arfood', (req, res) => res.render('food', {
-    title: 'AR-Food | Synematic'
+    title: 'AR-Food | Synematic',
+    layout: 'layout-food'
 }))
 
 

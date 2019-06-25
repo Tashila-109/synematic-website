@@ -13803,7 +13803,7 @@ body {
 
 .features-5 .info,
 .features-5 .title {
-  color: #FFFFFF;
+  color: #f5593d;
 }
 
 .features-5 .title:first-of-type {
@@ -13815,11 +13815,11 @@ body {
 }
 
 .features-5 .info p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .features-5 .container [class*=col-] {
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid #f5593d;
   border-top: 0;
   border-left: 0;
 }
